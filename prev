@@ -1,0 +1,17 @@
+<form>
+          
+         <div class="form-group">
+         
+         
+         <div>
+         <label for="superficie">superficie</label>
+         <input type="number" class="form-control" ref="superficie" id="superficie" >
+         </div>
+         <div>
+         <label for="espaceId">espaceId</label>
+         <select id="espace" v-model="selected"  >
+           <option v-for="espace in espaces" :key="espace.id" v-bind:value="espace.id">{{espace.id}}</option>
+         </select>
+         <input type="submit" id="btnsu" value="Submit"  v-on:click="onSubmit"  >
+         </div>
+         <p>{{selected}}</p>
